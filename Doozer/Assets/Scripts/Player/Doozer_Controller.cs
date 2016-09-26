@@ -16,6 +16,7 @@ public class Doozer_Controller : MonoBehaviour {
 	private bool directionRight;
 	public bool isGrounded;
 	private bool jumping;
+	public bool doubleJump;
 
 	private int counter = 0;
 
@@ -33,6 +34,7 @@ public class Doozer_Controller : MonoBehaviour {
 		isGrounded = false;
 		isAttacking = false;
 		jumping = false;
+		doubleJump = true;
 
 		attackBox.enabled = false;
 	
@@ -80,6 +82,13 @@ public class Doozer_Controller : MonoBehaviour {
 		if (jumping && isGrounded) {
 			myAnimator.SetTrigger ("jump"); 
 			doozer_rigidBody.velocity = new Vector2 (doozer_rigidBody.velocity.x, jumpPower);
+		}
+
+		if (jumping && !isGrounded && doubleJump) {
+			myAnimator.SetTrigger ("jump"); 
+			doozer_rigidBody.velocity = new Vector2 (doozer_rigidBody.velocity.x, jumpPower);
+			doubleJump = false;
+
 		}
 
 		jumping = false;
