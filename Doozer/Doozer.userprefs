@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\Doozer_Controller.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Enemies\Cannon_Script.cs" Line="58" Column="1" />
+      <File FileName="Assets\Scripts\World\Level1Script.cs" Line="53" Column="23" />
+      <File FileName="Assets\Scripts\Player\Doozer_Controller.cs" Line="62" Column="4" />
+      <File FileName="..\SpaceShooter\Assets\Scripts\GameController.js" Line="43" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
