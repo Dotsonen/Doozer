@@ -6,10 +6,12 @@ public class GroundPointScript : MonoBehaviour {
 	public GameObject myGameObject;
 	private Doozer_Controller script;
 
+
 	// Use this for initialization
 	void Start () {
 
 		script = myGameObject.GetComponent<Doozer_Controller> ();
+
 
 	}
 	
@@ -21,6 +23,9 @@ public class GroundPointScript : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter2D (Collision2D collision){
+
+		script.myAnimator.SetTrigger ("Grounded");	
+
 			script.isGrounded = true;
 			script.doubleJump = true;
 

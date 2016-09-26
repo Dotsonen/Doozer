@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class Level1Script : MonoBehaviour {
 
@@ -12,6 +14,8 @@ public class Level1Script : MonoBehaviour {
 	private Transform leftKeyTransform;
 	private Transform rightKeyTransform;
 	private Transform upKeyTransform;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -31,10 +35,10 @@ public class Level1Script : MonoBehaviour {
 	void Update () {
 
 		if(Input.GetKeyDown (KeyCode.R)){
-
-
-				Application.LoadLevel("Level1");
-		
+			SceneManager.LoadScene ("Level1");
+		}
+		if (player.transform.position.x > 125) {
+			SceneManager.LoadScene ("Level2");
 		}
 
 

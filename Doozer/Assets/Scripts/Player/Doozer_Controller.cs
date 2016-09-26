@@ -6,7 +6,7 @@ public class Doozer_Controller : MonoBehaviour {
 	public int movementSpeed = 5;
 	public int jumpPower = 5;
 	private Rigidbody2D doozer_rigidBody;
-	private Animator myAnimator;
+	public Animator myAnimator;
 
 	private float horizontal;
 	private float jump;
@@ -20,7 +20,7 @@ public class Doozer_Controller : MonoBehaviour {
 
 	private int counter = 0;
 
-	private bool dead;
+	public bool dead;
 
 	public Collider2D attackBox;
 
@@ -145,8 +145,12 @@ public class Doozer_Controller : MonoBehaviour {
 
 		if (collision.gameObject.tag == "Enemy_Bullet") {
 
-			myAnimator.SetTrigger ("death");
-			dead = true;
+
+			if (!dead) {
+				myAnimator.SetTrigger ("death");
+				dead = true;
+			}
+			doozer_rigidBody.velocity = new Vector2(0, doozer_rigidBody.velocity.y);
 
 		}
 

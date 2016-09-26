@@ -12,10 +12,12 @@ public class Cannon_Script : MonoBehaviour {
 	public Transform spawnposition;
 
 	private bool directionLeft;
+	private Doozer_Controller script;
 
 	// Use this for initialization
 	void Start () {
 		directionLeft = true;
+		script = player.GetComponent<Doozer_Controller> ();
 	}
 	
 	// Update is called once per frame
@@ -37,13 +39,12 @@ public class Cannon_Script : MonoBehaviour {
 	private void Shoot(){
 
 
-		if (cooldown == 0) {
+		if (cooldown == 0 && !script.dead) {
 
 
 			if (player.transform.position.x < transform.position.x) {
 				Instantiate (leftBullet, spawnposition.position, spawnposition.rotation);
 			} else {
-				Debug.Log ("Höger");
 				Instantiate (rightBullet, spawnposition.position, spawnposition.rotation);
 			}
 
