@@ -7,10 +7,13 @@ public class GroundPointScript : MonoBehaviour {
 	private Doozer_Controller script;
 
 
+
+
 	// Use this for initialization
 	void Start () {
 
 		script = myGameObject.GetComponent<Doozer_Controller> ();
+
 
 
 	}
@@ -29,6 +32,14 @@ public class GroundPointScript : MonoBehaviour {
 			script.isGrounded = true;
 			script.doubleJump = true;
 
+		if (collision.gameObject.tag == "Elevator") {
+			myGameObject.transform.SetParent (collision.gameObject.transform);
+		}
+
+		if (collision.gameObject.tag != "Elevator") {
+			myGameObject.transform.SetParent (null);
+		}
+
 	}
 
 
@@ -44,6 +55,8 @@ public class GroundPointScript : MonoBehaviour {
 
 		script.isGrounded = true;
 	}
+
+
 
 
 }

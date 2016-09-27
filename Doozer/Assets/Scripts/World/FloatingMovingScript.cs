@@ -45,7 +45,6 @@ public class FloatingMovingScript : MonoBehaviour {
 		if (!directionRight && xpos > leftLimit) {
 			myRigidbody.position = new Vector2 ((xpos - 0.2f), myRigidbody.position.y);
 
-		//	myRigidbody.velocity = new Vector2 (-4, 0);
 		} else if (!directionRight && !(xpos > leftLimit)) {
 			directionRight = !directionRight;
 		}

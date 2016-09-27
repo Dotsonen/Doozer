@@ -55,12 +55,16 @@ public class Doozer_Controller : MonoBehaviour {
 			
 		
 			horizontal = Input.GetAxis ("Horizontal");
+
 			FlipCharacter (horizontal);
 
 			HandleInputs ();
+			HandlePhysics ();
 			HandleJump ();
 			HandleAttack ();
 			HandleMovement (horizontal);
+
+
 		}
 
 
@@ -79,7 +83,7 @@ public class Doozer_Controller : MonoBehaviour {
 
 	private void HandleJump(){
 
-		if (jumping && isGrounded) {
+		if ((jumping && isGrounded) || jumping && doozer_rigidBody.isKinematic) {
 			myAnimator.SetTrigger ("jump"); 
 			doozer_rigidBody.velocity = new Vector2 (doozer_rigidBody.velocity.x, jumpPower);
 		}
@@ -155,5 +159,22 @@ public class Doozer_Controller : MonoBehaviour {
 		}
 
 
+	}
+
+
+	private void HandlePhysics(){
+
+		if (!doozer_rigidBody.isKinematic) {
+			if (Mathf.Abs (horizontal) < 0.1 && isGrounded && doozer_rigidBody.velocity.y < 0.1) {
+				doozer_rigidBody.isKinematic = true;
+			} 
+
+		}
+
+		if (doozer_rigidBody.isKinematic) {
+			if (Mathf.Abs (horizontal) > 0.1 || jumping) {
+				doozer_rigidBody.isKinematic = false;
+			}
+		}
 	}
 }
