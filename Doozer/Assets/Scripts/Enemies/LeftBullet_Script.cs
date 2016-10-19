@@ -13,7 +13,7 @@ public class LeftBullet_Script : MonoBehaviour {
 	
 		rigidbody = GetComponent<Rigidbody2D> ();
 
-		rigidbody.velocity = new Vector2 (bullet_speed * -1, 0);
+		rigidbody.velocity = new Vector2 (bullet_speed * -1, 0); //Instantiate the bullet with a fixed speed
 
 	}
 	

@@ -8,7 +8,6 @@ public class TriggerTest : MonoBehaviour {
 
 		other.transform.parent = gameObject.transform;
 
-		Debug.Log ("Jaha");
 	}
 
 	private void OnTriggerExit2D (Collider2D other){

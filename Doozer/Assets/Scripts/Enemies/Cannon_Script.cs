@@ -36,6 +36,8 @@ public class Cannon_Script : MonoBehaviour {
 	}
 
 
+	//Shoots a bullet every 200 Update.
+	//Should be fixed into a IEnumerator
 	private void Shoot(){
 
 
@@ -55,6 +57,8 @@ public class Cannon_Script : MonoBehaviour {
 
 	}
 
+
+	//Flip the cannon depending of where the player is
 	private void FlipCannon(){
 
 
@@ -66,6 +70,5 @@ public class Cannon_Script : MonoBehaviour {
 		}
 
 	}
-
 
 }

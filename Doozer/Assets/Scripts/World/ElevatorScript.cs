@@ -4,18 +4,17 @@ using System.Collections;
 public class ElevatorScript : MonoBehaviour {
 
 
-	private float startYPos, upLimit, downLimit, liveYPos;
+	private float  upLimit, liveYPos;
 	private bool directionUp;
 	private Rigidbody2D myRigidbody;
+	public Transform playerTransform;
 
 	// Use this for initialization
 	void Start () {
 
 		directionUp = true;
-		startYPos = transform.position.y;
+		upLimit = 9.5f;
 
-		upLimit = startYPos + 10;
-		downLimit = startYPos - 10;
 
 		myRigidbody = GetComponent<Rigidbody2D> (); 
 	}
@@ -39,17 +38,16 @@ public class ElevatorScript : MonoBehaviour {
 		if (directionUp && ypos < upLimit) {
 			myRigidbody.position = new Vector2 (transform.position.x, ypos + 0.2f);
 		} else if (directionUp && !(ypos < upLimit)) {
-			directionUp = !directionUp;
+
+			if(gameObject.GetComponentInChildren<Rigidbody2D>() != null)
+				BroadcastMessage ("Release", null, SendMessageOptions.DontRequireReceiver);
+
+			Destroy (gameObject);
+
+		
 		}
-
-		if (!directionUp && ypos > downLimit) {
-			myRigidbody.position = new Vector2(transform.position.x, (ypos - 0.2f));
-
-			//	myRigidbody.velocity = new Vector2 (-4, 0);
-		} else if (!directionUp && !(ypos > downLimit)) {
-			directionUp = !directionUp;
-		}
-
 
 	}
+
+
 }

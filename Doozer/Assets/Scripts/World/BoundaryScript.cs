@@ -3,16 +3,9 @@ using System.Collections;
 
 public class BoundaryScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
+
+	//Destroys bullets when they reach the boundary
 	private void OnTriggerExit2D (Collider2D collider){
 
 		if (collider.CompareTag("Enemy_Bullet")) {

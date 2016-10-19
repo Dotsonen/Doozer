@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+//Makes the Camera follow the player
 public class CameraScript : MonoBehaviour {
 
 	public GameObject player;
@@ -35,6 +37,7 @@ public class CameraScript : MonoBehaviour {
 
 	
 	}
+
 
 	private bool needCameraMovingRight(){
 

@@ -13,7 +13,7 @@ public class RightBullet_Script : MonoBehaviour {
 
 		rigidbody = GetComponent<Rigidbody2D> ();
 
-		rigidbody.velocity = new Vector2 (bullet_speed, 0);
+		rigidbody.velocity = new Vector2 (bullet_speed, 0);  // Instantiate the bullet with a fixed speed
 
 	}
 

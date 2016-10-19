@@ -47,18 +47,27 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemies\Cannon_Script.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyScript.cs" />
+     <Compile Include="Assets\Scripts\Enemies\FallingSpikeScript.cs" />
      <Compile Include="Assets\Scripts\Enemies\LeftBullet_Script.cs" />
      <Compile Include="Assets\Scripts\Enemies\RightBullet_Script.cs" />
+     <Compile Include="Assets\Scripts\Enemies\SpikeScript.cs" />
+     <Compile Include="Assets\Scripts\FadingScript.cs" />
+     <Compile Include="Assets\Scripts\GameControllerScript.cs" />
+     <Compile Include="Assets\Scripts\GoalScript.cs" />
      <Compile Include="Assets\Scripts\Player\Doozer_Controller.cs" />
      <Compile Include="Assets\Scripts\Player\GroundPointScript.cs" />
      <Compile Include="Assets\Scripts\Player\SwordHit_Script.cs" />
+     <Compile Include="Assets\Scripts\PrintFinalScoreScript.cs" />
      <Compile Include="Assets\Scripts\TriggerTest.cs" />
      <Compile Include="Assets\Scripts\World\BoundaryScript.cs" />
      <Compile Include="Assets\Scripts\World\CameraScript.cs" />
+     <Compile Include="Assets\Scripts\World\CoinScript.cs" />
      <Compile Include="Assets\Scripts\World\ElevatorScript.cs" />
+     <Compile Include="Assets\Scripts\World\ElevatorSpawn.cs" />
+     <Compile Include="Assets\Scripts\World\FloatingInvertScript.cs" />
      <Compile Include="Assets\Scripts\World\FloatingMovingScript.cs" />
-     <Compile Include="Assets\Scripts\World\Level1Script.cs" />
-     <Compile Include="Assets\Scripts\World\MovingBoxScript.cs" />
+     <Compile Include="Assets\Scripts\World\HiddenSignScript.cs" />
+     <Compile Include="Assets\Scripts\World\SignScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
