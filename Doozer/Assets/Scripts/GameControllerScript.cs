@@ -60,7 +60,6 @@ public class GameControllerScript : MonoBehaviour {
 			}
 			else  {
 				//Restart the level
-				Debug.Log ("LoadLevel");
 				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 				SetScore (levelStartScore);
 				restartText.text = "";
@@ -102,8 +101,6 @@ public class GameControllerScript : MonoBehaviour {
 	}
 
 	public void SetScore(int newScore){
-
-		Debug.Log ("Set " + newScore.ToString() );
 		score = newScore;
 	}
 
